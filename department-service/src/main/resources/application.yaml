@@ -1,5 +1,16 @@
 spring:
   application:
-    name=department-service
+    name: department-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/department_db
+    username: root
+    password: 1234
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        ddl-auto: update
+    show-sql: true
 server:
   port: 8082
